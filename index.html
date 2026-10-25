@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Someone Special</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- PHASE 1: The Invitation -->
+  <div id="phase1" class="card">
+    <div class="gif-container">
+      <!-- Replace with your preferred web GIF asset link -->
+      <img src="coffegiphy.gif" alt="Cute GIF">
+    </div>
+    <h1>Will you go out for coffee with me?</h1>
+    <div class="buttons">
+      <button id="yesBtn" onclick="nextQuestion()">Yes</button>
+      <button id="noBtn" onmouseover="moveNoButton()" onclick="moveNoButton()">No</button>
+    </div>
+  </div>
+
+  <!-- PHASE 1.5: Coffee Transition Display -->
+  <div id="coffeTime" class="card hidden">
+    <img src="giphy2.gif" style="width: 200px;" alt="Coffee Time">
+    <p style="font-size: 1.8rem; margin: 15px 0 0 0; font-weight: bold; color: #ff4d6d;">Yaehhh!!!! its Coffee Time</p>
+  </div>
+
+  <!-- PHASE 2: The Proposal -->
+  <div id="phase2" class="card hidden">
+    <div class="gif-container">
+      <img src="https://giphy.com" alt="Cute GIF">
+    </div>
+    <h1>Will you marry me?</h1>
+    <div class="buttons">
+      <button id="marryYesBtn" onclick="nextmerrQuestion()">Yes</button>
+      <button id="marryNoBtn" onclick="shakeNoButton()">No</button>
+    </div>
+    <p id="text" style="margin-top: 15px; font-weight: bold; color: #ff4d6d;"></p>
+  </div>
+
+  <!-- PHASE 2.5: Marriage Transition Display -->
+  <div id="merryText" class="card hidden">
+    <img src="/giphy3.gif" alt="Celebrate" style="width: 100%; max-width: 250px; border-radius: 15px;">
+    <p style="font-size: 1.5rem; margin-top: 15px; color: #ff4d6d;">😘 You made the right choice, because you are so kind 😉😊😋</p>
+  </div>
+
+  <!-- PHASE 3: The Date Options Grid -->
+  <div id="phase3" class="card hidden">
+    <div class="gif-container">
+      <img src="https://giphy.com" alt="Happy GIF">
+    </div>
+    <h1>Yay! What shall we do? 🍕</h1>
+    <div class="food-grid">
+      <div class="food-option" onclick="selectFood('Pizza & Movie')">
+        🍕<p>Pizza & Movie</p>
+      </div>
+      <div class="food-option" onclick="selectFood('Coffee & Dessert')">
+        ☕<p>Coffee & Cake</p>
+      </div>
+      <div class="food-option" onclick="selectFood('Tacos & Arcade')">
+        🌮<p>Tacos & Games</p>
+      </div>
+      <div class="food-option" onclick="selectFood('Sushi Date')">
+        💏<p>Sandwich Night 😋😙💏</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 4: Final Success Screen -->
+  <div id="phase4" class="card hidden">
+    <div class="gif-container">
+      <img src="https://giphy.com" alt="Celebration GIF">
+    </div>
+    <h1 id="finalMessage">Perfect choice! See you then! ❤️</h1>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

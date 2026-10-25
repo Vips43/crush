@@ -1,0 +1,121 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #ffe6e6;
+  text-align: center;
+  overflow: hidden;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 77, 109, 0.1);
+  max-width: 400px;
+  width: 90%;
+  transition: all 0.3s ease;
+}
+
+h1 {
+  color: #ff4d6d;
+  font-size: 2rem;
+  margin-top: 15px;
+}
+
+.gif-container img {
+  width: 180px;
+  border-radius: 15px;
+}
+
+.buttons {
+  margin-top: 25px;
+  position: relative;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+button {
+
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#yesBtn, #marryYesBtn {
+  background-color: #ff4d6d;
+  color: white;
+}
+
+#noBtn, #marryNoBtn {
+  background-color: #6c757d;
+  color: white;
+}
+
+#noBtn {
+  position: absolute;
+}
+
+/* Intermission layout text */
+#coffeTime, #merryText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Food Selection Dashboard Grid */
+.food-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.food-option {
+  border: 2px solid #ffe6e6;
+  padding: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+  font-size: 2.5rem;
+}
+
+.food-option:hover {
+  transform: scale(1.05);
+  border-color: #ff4d6d;
+}
+
+.food-option p {
+  font-size: 1rem;
+  margin: 5px 0 0 0;
+  font-weight: 600;
+  color: #495057;
+}
+
+/* Shake Animation Logic */
+.animate {
+  animation: shake 0.2s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
+}
